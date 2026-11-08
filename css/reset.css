@@ -1,0 +1,176 @@
+/* ==========================================================================
+   RESET CSS — Normalisation des styles navigateurs
+   ========================================================================== */
+
+/* 1. Box sizing sur tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Suppression des marges et paddings par défaut */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Hauteur de ligne et rendu du texte */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  line-height: 1.5;
+  scroll-behavior: auto;
+  scrollbar-gutter: stable;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. Médias : images, vidéos, canvas */
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+canvas {
+  touch-action: pan-y;
+}
+
+/* 5. Formulaires : héritage de la police */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 6. Suppression des styles par défaut des boutons */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 7. Liens : suppression du soulignement par défaut */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 8. Listes : suppression des puces et numéros */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 9. Tableaux : fusion des bordures */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 10. Titres : taille héritée pour contrôle total via CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.1;
+}
+
+/* 11. Paragraphes et textes */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 12. Accessibilité : respect de la préférence de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 13. Focus visible pour l'accessibilité */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* 14. Suppression du focus par défaut sur les éléments non interactifs */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 15. Champs de formulaire : suppression de l'apparence par défaut */
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 16. Placeholder : couleur héritée */
+::placeholder {
+  opacity: 0.6;
+}
+
+/* 17. Sélection de texte */
+::selection {
+  background-color: #ff4500;
+  color: #ffffff;
+}
+
+/* 18. Scrollbar personnalisée (optionnel, cohérent avec le thème sombre) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
